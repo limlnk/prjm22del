@@ -100,6 +100,7 @@ public class BController {
 	}
 	
 	//
+	//
 	@PostMapping("/delete")
 	public String delete(HttpServletRequest request,
 			Model model) {
