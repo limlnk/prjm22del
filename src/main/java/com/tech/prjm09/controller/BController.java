@@ -99,6 +99,7 @@ public class BController {
 		return "redirect:list";
 	}
 	
+	//
 	@PostMapping("/delete")
 	public String delete(HttpServletRequest request,
 			Model model) {
