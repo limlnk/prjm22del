@@ -34,9 +34,9 @@
 		<td colspan="2">
 			<a href="list">목록</a> &nbsp;&nbsp;
 			<a href="modify_view?bid=${content_view.bid }">수정</a> &nbsp;&nbsp;
-			<a href="">삭제</a> &nbsp;&nbsp;
+			<a href="delete">삭제</a> &nbsp;&nbsp;
 			<a href="reply_view?bid=${content_view.bid }">답변</a>
-		
+			//
 		</td>
 	</tr>
 </table>
