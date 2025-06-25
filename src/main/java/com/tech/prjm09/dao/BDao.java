@@ -320,5 +320,28 @@ public class BDao {
 		
 		
 	}
+	
+	public void delete(String bid) {
+		PreparedStatement pstmt=null;
+		try {
+			conn=DBCon.getConnection();
+			String query="delete from replyboard where bid=?";
+			
+			pstmt=conn.prepareStatement(query);
+			pstmt.setInt(1, Integer.parseInt(bid));
+			int rn=pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			
+		}finally {
+			try {
+				if(pstmt!=null) {pstmt.close();}
+				if(conn!=null) {conn.close();}
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+		}
+		
+	}
 
 }
