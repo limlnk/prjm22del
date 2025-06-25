@@ -6,21 +6,24 @@ import org.springframework.ui.Model;
 
 import com.tech.prjm09.dao.BDao;
 
+
 import jakarta.servlet.http.HttpServletRequest;
 
 public class BDeleteCommand implements BCommand{
 
 	@Override
 	public void execute(Model model) {
-		// TODO Auto-generated method stub
+
 		
 		Map<String, Object> map=model.asMap();
 		HttpServletRequest request=
 				(HttpServletRequest) map.get("request");
 		String bid=request.getParameter("bid");
+
 		
 		BDao dao=new BDao();
 		dao.delete(bid);
+
 	}
 
 }
